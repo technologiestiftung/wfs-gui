@@ -1,0 +1,41 @@
+{
+  "name": "wfs-gui",
+  "version": "1.0.0",
+  "description": "frontend to our wfs-tool",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tslint.json --force",
+    "typescript": "tsc",
+    "scss": "node-sass src/css --include-path src/css --outputStyle compressed --output dst/css --sourceMap true",
+    "build": "npm run lint && npm run typescript && npm run scss",
+    "watch": "nodemon "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/wfs-gui.git"
+  },
+  "author": "sebastian-meier @seb_meier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technologiestiftung/wfs-gui/issues"
+  },
+  "homepage": "https://github.com/technologiestiftung/wfs-gui#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      "dst/*"
+    ],
+    "watch": [
+      "src/js",
+      "src/css"
+    ],
+    "exec": "npm run build",
+    "ext": "ts,scss"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2"
+  }
+}

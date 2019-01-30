@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "./dst/js",
+    },
+    "include": ["src/js"],
+    "exclude": [
+    	"node_modules"
+	]
+}
